@@ -1,0 +1,32 @@
+{
+  "case_id": "HHG-016",
+  "account_id": "ACC_00015",
+  "transaction_id": "TXN_PT001_015",
+  "fraud_type": "Card Testing",
+  "pattern_detected": "PT001",
+  "risk_score": 0.905,
+  "transaction_amount": 9390.64,
+  "evidence": {
+    "transaction_history": "Account ACC_00015 shows 14 micro-transactions in the last 24h totaling $9390.64.",
+    "connected_accounts": [
+      "ACC_00016",
+      "ACC_00017",
+      "ACC_00018"
+    ],
+    "device_signals": "Flagged device DEV_0015 shared with 3 accounts.",
+    "graph_pattern": "Multi-hop TigerGraph traversal detected PT001 fraud ring with 4 nodes."
+  },
+  "policy_applied": "Card Testing Policy (CT-2024-01): Block card after >3 micro-transactions. Alert customer immediately. Threshold: $1.00\u2013$5.00 transactions.",
+  "graphrag_context": "Policy retrieved via ChromaDB semantic search on 'Card Testing' query.",
+  "agent_reasoning": "Step 1: Retrieved transaction history for ACC_00015. Step 2: Traversed graph to find 3 connected accounts sharing DEV_0015. Step 3: Ran GSQL pattern detection query \u2192 detected PT001 with 90.5% confidence. Step 4: Retrieved fraud policy via GraphRAG. Step 5: Executed NBA and flagged for SAR.",
+  "next_best_action": "Block card immediately, notify cardholder, open investigation case in graph, reset PIN, escalate to L1 analyst.",
+  "sar_required": true,
+  "sar_amount": 9390.64,
+  "case_status": "PENDING_ANALYST_REVIEW",
+  "investigated_by": "TigerGraph Agentic Fraud Investigator v1.0",
+  "tigergraph_queries_used": [
+    "getTransactionHistory",
+    "getConnectedAccounts",
+    "detectFraudPatterns"
+  ]
+}

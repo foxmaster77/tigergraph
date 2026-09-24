@@ -1,0 +1,32 @@
+{
+  "case_id": "HHG-007",
+  "account_id": "ACC_00006",
+  "transaction_id": "TXN_PT002_006",
+  "fraud_type": "Account Takeover",
+  "pattern_detected": "PT002",
+  "risk_score": 0.712,
+  "transaction_amount": 5508.58,
+  "evidence": {
+    "transaction_history": "Account ACC_00006 shows 4 micro-transactions in the last 24h totaling $5508.58.",
+    "connected_accounts": [
+      "ACC_00007",
+      "ACC_00008",
+      "ACC_00009"
+    ],
+    "device_signals": "Flagged device DEV_0006 shared with 3 accounts.",
+    "graph_pattern": "Multi-hop TigerGraph traversal detected PT002 fraud ring with 4 nodes."
+  },
+  "policy_applied": "ATO Policy (ATO-2024-02): Freeze accounts with >2 new device logins in 24h. Force MFA reset. Escalate to L2 within 4 hours.",
+  "graphrag_context": "Policy retrieved via ChromaDB semantic search on 'Account Takeover' query.",
+  "agent_reasoning": "Step 1: Retrieved transaction history for ACC_00006. Step 2: Traversed graph to find 3 connected accounts sharing DEV_0006. Step 3: Ran GSQL pattern detection query \u2192 detected PT002 with 71.2% confidence. Step 4: Retrieved fraud policy via GraphRAG. Step 5: Executed NBA and flagged for SAR.",
+  "next_best_action": "Request step-up MFA authentication, temporarily freeze account, alert customer via secure channel, escalate to L2.",
+  "sar_required": true,
+  "sar_amount": 5508.58,
+  "case_status": "PENDING_ANALYST_REVIEW",
+  "investigated_by": "TigerGraph Agentic Fraud Investigator v1.0",
+  "tigergraph_queries_used": [
+    "getTransactionHistory",
+    "getConnectedAccounts",
+    "detectFraudPatterns"
+  ]
+}

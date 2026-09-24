@@ -1,0 +1,32 @@
+{
+  "case_id": "HHG-004",
+  "account_id": "ACC_00003",
+  "transaction_id": "TXN_PT004_003",
+  "fraud_type": "Money Mule Network",
+  "pattern_detected": "PT004",
+  "risk_score": 0.9064,
+  "transaction_amount": 8397.48,
+  "evidence": {
+    "transaction_history": "Account ACC_00003 shows 15 micro-transactions in the last 24h totaling $8397.48.",
+    "connected_accounts": [
+      "ACC_00004",
+      "ACC_00005",
+      "ACC_00006"
+    ],
+    "device_signals": "Flagged device DEV_0003 shared with 3 accounts.",
+    "graph_pattern": "Multi-hop TigerGraph traversal detected PT004 fraud ring with 4 nodes."
+  },
+  "policy_applied": "Money Mule Policy (MM-2024-04): SAR mandatory for structured network transfers. Freeze all connected nodes. Report to FinCEN.",
+  "graphrag_context": "Policy retrieved via ChromaDB semantic search on 'Money Mule Network' query.",
+  "agent_reasoning": "Step 1: Retrieved transaction history for ACC_00003. Step 2: Traversed graph to find 3 connected accounts sharing DEV_0003. Step 3: Ran GSQL pattern detection query \u2192 detected PT004 with 90.6% confidence. Step 4: Retrieved fraud policy via GraphRAG. Step 5: Executed NBA and flagged for SAR.",
+  "next_best_action": "Freeze all connected mule accounts, escalate to L2 analyst, file Suspicious Activity Report (SAR) within 30 days.",
+  "sar_required": true,
+  "sar_amount": 8397.48,
+  "case_status": "PENDING_ANALYST_REVIEW",
+  "investigated_by": "TigerGraph Agentic Fraud Investigator v1.0",
+  "tigergraph_queries_used": [
+    "getTransactionHistory",
+    "getConnectedAccounts",
+    "detectFraudPatterns"
+  ]
+}

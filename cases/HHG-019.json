@@ -1,0 +1,32 @@
+{
+  "case_id": "HHG-019",
+  "account_id": "ACC_00018",
+  "transaction_id": "TXN_PT003_018",
+  "fraud_type": "Synthetic Identity",
+  "pattern_detected": "PT003",
+  "risk_score": 0.672,
+  "transaction_amount": 10719.24,
+  "evidence": {
+    "transaction_history": "Account ACC_00018 shows 3 micro-transactions in the last 24h totaling $10719.24.",
+    "connected_accounts": [
+      "ACC_00019",
+      "ACC_00020",
+      "ACC_00021"
+    ],
+    "device_signals": "Flagged device DEV_0018 shared with 3 accounts.",
+    "graph_pattern": "Multi-hop TigerGraph traversal detected PT003 fraud ring with 4 nodes."
+  },
+  "policy_applied": "Synthetic ID Policy (SID-2024-03): Flag SSN/DOB mismatch. Require in-branch identity verification. SAR if loss >$500.",
+  "graphrag_context": "Policy retrieved via ChromaDB semantic search on 'Synthetic Identity' query.",
+  "agent_reasoning": "Step 1: Retrieved transaction history for ACC_00018. Step 2: Traversed graph to find 3 connected accounts sharing DEV_0018. Step 3: Ran GSQL pattern detection query \u2192 detected PT003 with 67.2% confidence. Step 4: Retrieved fraud policy via GraphRAG. Step 5: Executed NBA and flagged for SAR.",
+  "next_best_action": "Flag identity for KYC re-verification, freeze outbound transactions, notify compliance team, prepare SAR draft.",
+  "sar_required": false,
+  "sar_amount": 0,
+  "case_status": "PENDING_ANALYST_REVIEW",
+  "investigated_by": "TigerGraph Agentic Fraud Investigator v1.0",
+  "tigergraph_queries_used": [
+    "getTransactionHistory",
+    "getConnectedAccounts",
+    "detectFraudPatterns"
+  ]
+}

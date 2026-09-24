@@ -1,0 +1,32 @@
+{
+  "case_id": "HHG-015",
+  "account_id": "ACC_00014",
+  "transaction_id": "TXN_PT005_014",
+  "fraud_type": "Merchant Collusion",
+  "pattern_detected": "PT005",
+  "risk_score": 0.811,
+  "transaction_amount": 10188.08,
+  "evidence": {
+    "transaction_history": "Account ACC_00014 shows 11 micro-transactions in the last 24h totaling $10188.08.",
+    "connected_accounts": [
+      "ACC_00015",
+      "ACC_00016",
+      "ACC_00017"
+    ],
+    "device_signals": "Flagged device DEV_0014 shared with 3 accounts.",
+    "graph_pattern": "Multi-hop TigerGraph traversal detected PT005 fraud ring with 4 nodes."
+  },
+  "policy_applied": "Merchant Collusion Policy (MC-2024-05): Suspend merchant POS. Initiate chargeback audit. Report to card network (Visa/MC) within 10 days.",
+  "graphrag_context": "Policy retrieved via ChromaDB semantic search on 'Merchant Collusion' query.",
+  "agent_reasoning": "Step 1: Retrieved transaction history for ACC_00014. Step 2: Traversed graph to find 3 connected accounts sharing DEV_0014. Step 3: Ran GSQL pattern detection query \u2192 detected PT005 with 81.1% confidence. Step 4: Retrieved fraud policy via GraphRAG. Step 5: Executed NBA and flagged for SAR.",
+  "next_best_action": "Suspend merchant account, freeze settlements, initiate chargeback review, notify acquiring bank, prepare SAR.",
+  "sar_required": true,
+  "sar_amount": 10188.08,
+  "case_status": "PENDING_ANALYST_REVIEW",
+  "investigated_by": "TigerGraph Agentic Fraud Investigator v1.0",
+  "tigergraph_queries_used": [
+    "getTransactionHistory",
+    "getConnectedAccounts",
+    "detectFraudPatterns"
+  ]
+}
