@@ -1,0 +1,257 @@
+// =====================================================================
+// TigerGraph Fraud Investigation Schema
+// HHGOA Hackathon - IEEE-CIS Fraud Detection
+// =====================================================================
+
+USE GLOBAL
+
+DROP ALL
+
+// ---- VERTEX TYPES ----
+
+CREATE VERTEX Account (
+  PRIMARY_ID account_id STRING,
+  card1 INT,
+  card2 FLOAT,
+  card3 FLOAT,
+  card4 STRING,
+  card5 FLOAT,
+  card6 STRING,
+  addr1 FLOAT,
+  addr2 FLOAT,
+  P_emaildomain STRING,
+  R_emaildomain STRING,
+  total_transactions INT DEFAULT 0,
+  total_amount FLOAT DEFAULT 0.0,
+  fraud_score_avg FLOAT DEFAULT 0.0,
+  is_blocked BOOL DEFAULT FALSE,
+  created_at DATETIME
+) WITH STATS="OUTDEGREE_BY_EDGETYPE"
+
+CREATE VERTEX Transaction (
+  PRIMARY_ID transaction_id STRING,
+  transaction_dt INT,
+  transaction_amt FLOAT,
+  product_cd STRING,
+  dist1 FLOAT,
+  dist2 FLOAT,
+  risk_score FLOAT,
+  is_fraud_confirmed BOOL DEFAULT FALSE,
+  status STRING DEFAULT "pending",
+  created_at DATETIME
+) WITH STATS="OUTDEGREE_BY_EDGETYPE"
+
+CREATE VERTEX Device (
+  PRIMARY_ID device_id STRING,
+  device_type STRING,
+  device_info STRING,
+  browser STRING,
+  os STRING
+) WITH STATS="OUTDEGREE_BY_EDGETYPE"
+
+CREATE VERTEX Merchant (
+  PRIMARY_ID merchant_id STRING,
+  product_category STRING,
+  fraud_rate FLOAT DEFAULT 0.0,
+  total_transactions INT DEFAULT 0
+) WITH STATS="OUTDEGREE_BY_EDGETYPE"
+
+CREATE VERTEX FraudCase (
+  PRIMARY_ID case_id STRING,
+  trigger_type STRING,
+  trigger_source STRING,
+  account_id STRING,
+  transaction_id STRING,
+  status STRING DEFAULT "open",
+  fraud_type STRING DEFAULT "unknown",
+  risk_level STRING DEFAULT "unknown",
+  risk_score FLOAT DEFAULT 0.0,
+  confidence FLOAT DEFAULT 0.0,
+  evidence_summary STRING DEFAULT "",
+  next_best_action STRING DEFAULT "",
+  next_best_action_pre_evidence STRING DEFAULT "",
+  next_best_action_post_evidence STRING DEFAULT "",
+  requires_sar BOOL DEFAULT FALSE,
+  sar_filed BOOL DEFAULT FALSE,
+  approval_route STRING DEFAULT "",
+  investigator_notes STRING DEFAULT "",
+  created_at DATETIME,
+  updated_at DATETIME,
+  closed_at DATETIME,
+  outcome STRING DEFAULT ""
+) WITH STATS="OUTDEGREE_BY_EDGETYPE"
+
+CREATE VERTEX Evidence (
+  PRIMARY_ID evidence_id STRING,
+  evidence_type STRING,
+  description STRING,
+  source STRING,
+  importance STRING DEFAULT "medium",
+  gathered_at DATETIME
+) WITH STATS="OUTDEGREE_BY_EDGETYPE"
+
+CREATE VERTEX FraudPattern (
+  PRIMARY_ID pattern_id STRING,
+  pattern_name STRING,
+  description STRING,
+  indicators STRING,
+  typical_risk STRING,
+  example_case_ids STRING
+) WITH STATS="OUTDEGREE_BY_EDGETYPE"
+
+// ---- EDGE TYPES ----
+
+CREATE DIRECTED EDGE MADE_TRANSACTION (FROM Account, TO Transaction,
+  timestamp DATETIME
+)
+
+CREATE DIRECTED EDGE USED_DEVICE (FROM Transaction, TO Device,
+  timestamp DATETIME
+)
+
+CREATE DIRECTED EDGE PART_OF_CASE (FROM Transaction, TO FraudCase,
+  reason STRING
+)
+
+CREATE DIRECTED EDGE ACCOUNT_IN_CASE (FROM Account, TO FraudCase,
+  role STRING DEFAULT "subject"
+)
+
+CREATE DIRECTED EDGE HAS_EVIDENCE (FROM FraudCase, TO Evidence,
+  added_at DATETIME
+)
+
+CREATE DIRECTED EDGE MATCHES_PATTERN (FROM FraudCase, TO FraudPattern,
+  confidence FLOAT,
+  matched_at DATETIME
+)
+
+CREATE DIRECTED EDGE SIMILAR_CASE (FROM FraudCase, TO FraudCase,
+  similarity_score FLOAT,
+  shared_pattern STRING
+)
+
+CREATE DIRECTED EDGE SHARED_DEVICE (FROM Account, TO Account,
+  device_id STRING,
+  first_seen DATETIME
+)
+
+CREATE DIRECTED EDGE SHARED_CARD (FROM Account, TO Account,
+  card_field STRING,
+  card_value STRING
+)
+
+// ---- GRAPH ----
+
+CREATE GRAPH FraudGraph (
+  Account, Transaction, Device, Merchant, FraudCase, Evidence, FraudPattern,
+  MADE_TRANSACTION, USED_DEVICE, PART_OF_CASE, ACCOUNT_IN_CASE,
+  HAS_EVIDENCE, MATCHES_PATTERN, SIMILAR_CASE, SHARED_DEVICE, SHARED_CARD
+)
+
+USE GRAPH FraudGraph
+
+// ---- GSQL QUERIES ----
+
+CREATE OR REPLACE QUERY get_account_transactions(VERTEX<Account> acc, INT limit=50) FOR GRAPH FraudGraph {
+  /*
+  Returns all transactions made by an account, ordered by time descending
+  */
+  SetAccum<EDGE> @@edges;
+  ListAccum<MAP<STRING,STRING>> @@txn_list;
+
+  start = {acc};
+  txns = SELECT t
+         FROM start:a -(MADE_TRANSACTION:e)-> Transaction:t
+         ORDER BY t.transaction_dt DESC
+         LIMIT limit;
+
+  PRINT txns;
+}
+
+CREATE OR REPLACE QUERY get_connected_accounts(VERTEX<Account> acc, INT hops=2) FOR GRAPH FraudGraph {
+  /*
+  Find accounts connected via shared devices or shared card attributes
+  */
+  OrAccum @visited = FALSE;
+  SetAccum<VERTEX<Account>> @@connected;
+
+  start = {acc};
+  start = SELECT a FROM start:a POST-ACCUM a.@visited = TRUE;
+
+  WHILE start.size() > 0 LIMIT hops DO
+    start = SELECT tgt
+            FROM start:src -(SHARED_DEVICE|SHARED_CARD:e)-> Account:tgt
+            WHERE tgt.@visited == FALSE
+            POST-ACCUM tgt.@visited = TRUE, @@connected += tgt;
+  END;
+
+  connected_accs = {@@connected};
+  PRINT connected_accs;
+}
+
+CREATE OR REPLACE QUERY detect_card_testing(VERTEX<Account> acc, INT window_hours=24) FOR GRAPH FraudGraph {
+  /*
+  Pattern: Multiple small transactions followed by large transaction
+  Returns risk score 0-100
+  */
+  AvgAccum @avg_amt;
+  SumAccum<INT> @small_count;
+  SumAccum<INT> @large_count;
+  MaxAccum<FLOAT> @max_amt;
+
+  start = {acc};
+  txns = SELECT t
+         FROM start:a -(MADE_TRANSACTION)-> Transaction:t
+         ORDER BY t.transaction_dt DESC
+         LIMIT 20;
+
+  txns = SELECT t FROM txns:t
+         POST-ACCUM
+           t.@avg_amt += t.transaction_amt,
+           CASE WHEN t.transaction_amt < 10 THEN t.@small_count += 1 END,
+           CASE WHEN t.transaction_amt > 500 THEN t.@large_count += 1 END,
+           t.@max_amt += t.transaction_amt;
+
+  PRINT txns;
+}
+
+CREATE OR REPLACE QUERY get_high_risk_transactions(FLOAT min_risk=0.7, INT limit=100) FOR GRAPH FraudGraph {
+  /*
+  Returns transactions above a risk threshold
+  */
+  txns = SELECT t FROM Transaction:t
+         WHERE t.risk_score >= min_risk
+         ORDER BY t.risk_score DESC
+         LIMIT limit;
+  PRINT txns;
+}
+
+CREATE OR REPLACE QUERY get_case_details(VERTEX<FraudCase> fc) FOR GRAPH FraudGraph {
+  /*
+  Returns full case details including evidence and matching patterns
+  */
+  start = {fc};
+  evidence = SELECT e FROM start:c -(HAS_EVIDENCE)-> Evidence:e;
+  patterns = SELECT p FROM start:c -(MATCHES_PATTERN)-> FraudPattern:p;
+  similar = SELECT s FROM start:c -(SIMILAR_CASE)-> FraudCase:s ORDER BY s.risk_score DESC LIMIT 5;
+  transactions = SELECT t FROM start:c -(PART_OF_CASE:e)-> Transaction:t;
+  accounts = SELECT a FROM start:c -(ACCOUNT_IN_CASE:e)-> Account:a;
+
+  PRINT start, evidence, patterns, similar, transactions, accounts;
+}
+
+CREATE OR REPLACE QUERY get_similar_cases(STRING fraud_type, FLOAT min_conf=0.5, INT limit=5) FOR GRAPH FraudGraph {
+  /*
+  Retrieve closed cases similar to a given fraud type for memory/RAG
+  */
+  cases = SELECT fc FROM FraudCase:fc
+          WHERE fc.fraud_type == fraud_type
+            AND fc.status == "closed"
+            AND fc.confidence >= min_conf
+          ORDER BY fc.risk_score DESC
+          LIMIT limit;
+  PRINT cases;
+}
+
+INSTALL QUERY ALL

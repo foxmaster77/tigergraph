@@ -1,0 +1,33 @@
+FRAUD INVESTIGATION RECORD: BENCH_06
+Account: ACC_00155
+Transaction: TXN_001235
+Trigger: Case 6: Potential card testing detected on account ACC_00155. Transaction TXN_001235 flagged with risk score 0.82.
+============================================================
+
+### Investigation Record: BENCH_06
+
+**1. Evidence Gathered**
+I queried the transaction history for `ACC_00155` and analyzed connected devices.
+> Transaction history for ACC_00155 (5 transactions):
+> Connected accounts for ACC_00155 (124 found):
+
+**2. Graph Pattern Analysis**
+I ran TigerGraph traversal patterns on `TXN_001235`.
+```
+No strong fraud patterns detected.
+Risk: 0.372 (baseline behavior appears normal)
+```
+
+**3. Policy Retrieval (GraphRAG)**
+Consulting the bank fraud policy:
+_Risk Thresholds: MEDIUM 0.31-0.5 (monitor), requires L1 Analyst review if escalated._
+
+**4. Next Best Action (NBA)**
+Based on the evidence and policy guidelines, the recommended action is:
+**Monitor account, request identity verification documents.**
+
+**5. SAR Determination**
+If confirmed fraud exceeds $5,000, a Suspicious Activity Report (SAR) will be generated and filed automatically.
+
+============================================================
+Case Status: PENDING ANALYST REVIEW

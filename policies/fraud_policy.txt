@@ -1,0 +1,208 @@
+FRAUD INVESTIGATION POLICY DOCUMENT
+TigerGraph Hackathon - HHGOA IEEE-CIS Fraud Detection
+Version 1.0 | Effective Date: 2024-01-01
+
+=======================================================================
+SECTION 1: FRAUD TYPOLOGIES AND PATTERNS
+=======================================================================
+
+PATTERN 1: CARD TESTING FRAUD
+------------------------------
+Definition: Fraudsters who obtain stolen card data test cards with small
+transactions to verify validity before executing larger fraudulent purchases.
+
+Key Indicators:
+- Multiple micro-transactions (< $10) within 24 hours
+- Followed by one or more high-value transactions (> $500)
+- Transactions across multiple product categories
+- High-velocity behavior (5+ transactions in 1 hour)
+- New or rarely used account
+- Mismatched billing and shipping addresses
+
+Risk Level: HIGH
+Required Actions: Block card immediately, notify customer via SMS/email,
+  open fraud case, file SAR if transaction amount exceeds $5,000.
+
+Pattern ID: PT001
+
+---
+
+PATTERN 2: ACCOUNT TAKEOVER (ATO)
+-----------------------------------
+Definition: A fraudster gains unauthorized access to a legitimate account
+and uses it to conduct fraudulent transactions.
+
+Key Indicators:
+- Login from new/unknown device (new device_info, DeviceType change)
+- Change in email domain (P_emaildomain mismatch from history)
+- Transaction from new geographic location (addr1/addr2 anomaly)
+- Change in transaction behavior (amount, frequency, merchant type)
+- Failed authentication attempts before successful login
+- High-risk identity signals (id_02, id_09, id_11 anomalies)
+
+Risk Level: CRITICAL
+Required Actions: Require step-up authentication, temporarily freeze account,
+  notify account holder, open fraud case. File SAR if losses > $10,000.
+
+Pattern ID: PT002
+
+---
+
+PATTERN 3: SYNTHETIC IDENTITY FRAUD
+-------------------------------------
+Definition: Fraudsters create fake identities by combining real and
+fictitious information to open new accounts.
+
+Key Indicators:
+- New account with high transaction volume immediately
+- Email domain from free/temporary providers
+- addr1/addr2 inconsistency with billing records
+- C1/C2 = 0 (no prior transaction history)
+- Unusual device fingerprint or browser metadata
+- Risk scores consistently between 0.4-0.7 (designed to avoid triggers)
+
+Risk Level: HIGH
+Required Actions: Request identity verification documents, place account
+  on monitoring, open fraud case. Do not freeze without confirmation.
+
+Pattern ID: PT003
+
+---
+
+PATTERN 4: MONEY MULE NETWORK
+-------------------------------
+Definition: A fraudster uses a network of mule accounts to layer and
+transfer illicitly obtained funds.
+
+Key Indicators:
+- Multiple accounts sharing the same device_id or device_info
+- Rapid fund transfers between linked accounts
+- Accounts opened within short periods of each other (D1 similarities)
+- High dist1/dist2 values (geographic dispersion)
+- Cards (card1-card6) with overlapping attributes
+- Transaction graph exhibits hub-and-spoke structure
+
+Risk Level: CRITICAL
+Required Actions: Map the full network via graph traversal, freeze all
+  identified mule accounts, file SAR, escalate to Fraud Analyst L2.
+
+Pattern ID: PT004
+
+---
+
+PATTERN 5: MERCHANT COLLUSION FRAUD
+--------------------------------------
+Definition: A merchant collaborates with a fraudster to process fictitious
+transactions or inflate transaction amounts.
+
+Key Indicators:
+- High transaction volume at single merchant in short period
+- Average transaction amount significantly above merchant baseline
+- Multiple different cards used at same merchant (M1-M9 flags)
+- V features (V1-V200) show consistent anomaly signatures
+- Returns/chargebacks from the same merchant code
+- ProductCD concentrated to single category (H, C, S, R)
+
+Risk Level: HIGH
+Required Actions: Place merchant on watchlist, block further transactions
+  at that merchant, initiate merchant investigation case.
+
+Pattern ID: PT005
+
+=======================================================================
+SECTION 2: RISK SCORING THRESHOLDS
+=======================================================================
+
+Risk Score Range | Risk Level | Action Required
+0.00 - 0.30     | LOW        | Allow transaction, log for review
+0.31 - 0.50     | MEDIUM     | Flag for review, allow with monitoring
+0.51 - 0.70     | ELEVATED   | Request step-up auth, hold transaction
+0.71 - 0.85     | HIGH       | Block transaction, open case
+0.86 - 1.00     | CRITICAL   | Block transaction, freeze account, open case
+
+=======================================================================
+SECTION 3: ACTIONS AND APPROVAL ROUTES
+=======================================================================
+
+ACTION                    | AUTHORIZATION LEVEL   | AUTOMATED? | SAR REQUIRED
+Allow transaction         | System (auto)          | Yes        | No
+Flag for monitoring       | System (auto)          | Yes        | No
+Hold transaction          | System (auto)          | Yes        | No
+Request step-up auth      | System (auto)          | Yes        | No
+Block transaction         | L1 Fraud Analyst       | No         | If > $5,000
+Freeze account            | L1 Fraud Analyst       | No         | If > $10,000
+Unfreeze account          | L2 Fraud Analyst       | No         | No
+File SAR                  | Compliance Officer     | No         | Required
+Close case                | L1 Fraud Analyst       | No         | N/A
+Escalate to L2            | L1 Fraud Analyst       | Yes        | N/A
+Merchant block            | L2 Fraud Analyst       | No         | If > $25,000
+Law enforcement referral  | Legal / Compliance     | No         | Required
+
+=======================================================================
+SECTION 4: SAR (SUSPICIOUS ACTIVITY REPORT) REQUIREMENTS
+=======================================================================
+
+A SAR MUST be filed when:
+1. Transaction amount exceeds $5,000 AND fraud is confirmed
+2. Pattern matches money laundering indicators (PT004)
+3. Network involves 3+ accounts
+4. Loss to institution exceeds $10,000
+5. Customer identity cannot be verified after step-up auth
+
+SAR Contents Required:
+- Case ID, date opened, date closed
+- Subject name, account ID, transaction IDs
+- Description of suspicious activity
+- Evidence summary
+- Fraud pattern identified
+- Recommended actions taken
+
+SAR must be filed within 30 calendar days of detection.
+
+=======================================================================
+SECTION 5: EVIDENCE GATHERING PROCEDURES
+=======================================================================
+
+Tier 1 (Automated - No Approval Needed):
+- Query transaction history (last 90 days)
+- Retrieve device fingerprint data
+- Run graph traversal for connected accounts
+- Compare against known fraud patterns
+- Access prior closed cases via case memory
+
+Tier 2 (Requires L1 Approval):
+- Send customer verification SMS/email request
+- Request step-up authentication
+- Pull identity documents from KYC system
+- Query external fraud databases
+
+Tier 3 (Requires L2/Compliance Approval):
+- Legal hold on account
+- Law enforcement subpoena data
+- Cross-institutional data sharing
+
+=======================================================================
+SECTION 6: CASE STATUSES
+=======================================================================
+
+open       : Actively being investigated
+in_review  : Pending analyst decision
+escalated  : Elevated to senior analyst or compliance
+closed_confirmed  : Confirmed fraud, actions taken
+closed_cleared    : No fraud found, case closed
+closed_inconclusive: Insufficient evidence, monitoring continues
+
+=======================================================================
+SECTION 7: REGULATORY REFERENCES
+=======================================================================
+
+- Bank Secrecy Act (BSA): SAR filing requirements
+- Regulation E: Consumer liability for unauthorized EFT
+- FinCEN Guidance FIN-2014-A008: Cybercrime and fraud reporting
+- FFIEC BSA/AML Examination Manual: Risk assessment guidelines
+- Payment Card Industry DSS: Card data security requirements
+- CFPB Error Resolution: Customer notification timelines
+
+=======================================================================
+END OF POLICY DOCUMENT
+=======================================================================

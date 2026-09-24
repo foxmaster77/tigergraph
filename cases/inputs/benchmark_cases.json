@@ -1,0 +1,202 @@
+[
+  {
+    "case_id": "BENCH_01",
+    "account_id": "ACC_00000",
+    "transaction_id": "TXN_CT_BIG",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.8007,
+    "expected_pattern": "card_testing",
+    "description": "Case 1: Potential card testing detected on account ACC_00000. Transaction TXN_CT_BIG flagged with risk score 0.82."
+  },
+  {
+    "case_id": "BENCH_02",
+    "account_id": "ACC_00001",
+    "transaction_id": "TXN_ATO_001",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.7824,
+    "expected_pattern": "account_takeover",
+    "description": "Case 2: Potential account takeover detected on account ACC_00001. Transaction TXN_ATO_001 flagged with risk score 0.78."
+  },
+  {
+    "case_id": "BENCH_03",
+    "account_id": "ACC_00002",
+    "transaction_id": "TXN_SI_000",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.6113,
+    "expected_pattern": "synthetic_identity",
+    "description": "Case 3: Potential synthetic identity detected on account ACC_00002. Transaction TXN_SI_000 flagged with risk score 0.55."
+  },
+  {
+    "case_id": "BENCH_04",
+    "account_id": "ACC_00010",
+    "transaction_id": "TXN_MM_000",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.9387,
+    "expected_pattern": "money_mule_network",
+    "description": "Case 4: Potential money mule network detected on account ACC_00010. Transaction TXN_MM_000 flagged with risk score 0.87."
+  },
+  {
+    "case_id": "BENCH_05",
+    "account_id": "ACC_00020",
+    "transaction_id": "TXN_MC_000",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.9629,
+    "expected_pattern": "merchant_collusion",
+    "description": "Case 5: Potential merchant collusion detected on account ACC_00020. Transaction TXN_MC_000 flagged with risk score 0.88."
+  },
+  {
+    "case_id": "BENCH_06",
+    "account_id": "ACC_00155",
+    "transaction_id": "TXN_001235",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.8189,
+    "expected_pattern": "card_testing",
+    "description": "Case 6: Potential card testing detected on account ACC_00155. Transaction TXN_001235 flagged with risk score 0.82."
+  },
+  {
+    "case_id": "BENCH_07",
+    "account_id": "ACC_00186",
+    "transaction_id": "TXN_001482",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.7956,
+    "expected_pattern": "account_takeover",
+    "description": "Case 7: Potential account takeover detected on account ACC_00186. Transaction TXN_001482 flagged with risk score 0.78."
+  },
+  {
+    "case_id": "BENCH_08",
+    "account_id": "ACC_00217",
+    "transaction_id": "TXN_001729",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.5828,
+    "expected_pattern": "synthetic_identity",
+    "description": "Case 8: Potential synthetic identity detected on account ACC_00217. Transaction TXN_001729 flagged with risk score 0.55."
+  },
+  {
+    "case_id": "BENCH_09",
+    "account_id": "ACC_00248",
+    "transaction_id": "TXN_001976",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.8936,
+    "expected_pattern": "money_mule_network",
+    "description": "Case 9: Potential money mule network detected on account ACC_00248. Transaction TXN_001976 flagged with risk score 0.87."
+  },
+  {
+    "case_id": "BENCH_10",
+    "account_id": "ACC_00279",
+    "transaction_id": "TXN_002223",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.963,
+    "expected_pattern": "merchant_collusion",
+    "description": "Case 10: Potential merchant collusion detected on account ACC_00279. Transaction TXN_002223 flagged with risk score 0.88."
+  },
+  {
+    "case_id": "BENCH_11",
+    "account_id": "ACC_00310",
+    "transaction_id": "TXN_002470",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.8261,
+    "expected_pattern": "card_testing",
+    "description": "Case 11: Potential card testing detected on account ACC_00310. Transaction TXN_002470 flagged with risk score 0.82."
+  },
+  {
+    "case_id": "BENCH_12",
+    "account_id": "ACC_00341",
+    "transaction_id": "TXN_002717",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.7318,
+    "expected_pattern": "account_takeover",
+    "description": "Case 12: Potential account takeover detected on account ACC_00341. Transaction TXN_002717 flagged with risk score 0.78."
+  },
+  {
+    "case_id": "BENCH_13",
+    "account_id": "ACC_00372",
+    "transaction_id": "TXN_002964",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.6064,
+    "expected_pattern": "synthetic_identity",
+    "description": "Case 13: Potential synthetic identity detected on account ACC_00372. Transaction TXN_002964 flagged with risk score 0.55."
+  },
+  {
+    "case_id": "BENCH_14",
+    "account_id": "ACC_00403",
+    "transaction_id": "TXN_003211",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.9485,
+    "expected_pattern": "money_mule_network",
+    "description": "Case 14: Potential money mule network detected on account ACC_00403. Transaction TXN_003211 flagged with risk score 0.87."
+  },
+  {
+    "case_id": "BENCH_15",
+    "account_id": "ACC_00434",
+    "transaction_id": "TXN_003458",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.8789,
+    "expected_pattern": "merchant_collusion",
+    "description": "Case 15: Potential merchant collusion detected on account ACC_00434. Transaction TXN_003458 flagged with risk score 0.88."
+  },
+  {
+    "case_id": "BENCH_16",
+    "account_id": "ACC_00465",
+    "transaction_id": "TXN_003705",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.8189,
+    "expected_pattern": "card_testing",
+    "description": "Case 16: Potential card testing detected on account ACC_00465. Transaction TXN_003705 flagged with risk score 0.82."
+  },
+  {
+    "case_id": "BENCH_17",
+    "account_id": "ACC_00496",
+    "transaction_id": "TXN_003952",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.8085,
+    "expected_pattern": "account_takeover",
+    "description": "Case 17: Potential account takeover detected on account ACC_00496. Transaction TXN_003952 flagged with risk score 0.78."
+  },
+  {
+    "case_id": "BENCH_18",
+    "account_id": "ACC_00027",
+    "transaction_id": "TXN_004199",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.6499,
+    "expected_pattern": "synthetic_identity",
+    "description": "Case 18: Potential synthetic identity detected on account ACC_00027. Transaction TXN_004199 flagged with risk score 0.55."
+  },
+  {
+    "case_id": "BENCH_19",
+    "account_id": "ACC_00058",
+    "transaction_id": "TXN_004446",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.8657,
+    "expected_pattern": "money_mule_network",
+    "description": "Case 19: Potential money mule network detected on account ACC_00058. Transaction TXN_004446 flagged with risk score 0.87."
+  },
+  {
+    "case_id": "BENCH_20",
+    "account_id": "ACC_00089",
+    "transaction_id": "TXN_004693",
+    "trigger_type": "risk_score",
+    "trigger_source": "automated_risk_system",
+    "initial_risk_score": 0.9078,
+    "expected_pattern": "merchant_collusion",
+    "description": "Case 20: Potential merchant collusion detected on account ACC_00089. Transaction TXN_004693 flagged with risk score 0.88."
+  }
+]

@@ -1,0 +1,33 @@
+FRAUD INVESTIGATION RECORD: BENCH_03
+Account: ACC_00002
+Transaction: TXN_SI_000
+Trigger: Case 3: Potential synthetic identity detected on account ACC_00002. Transaction TXN_SI_000 flagged with risk score 0.55.
+============================================================
+
+### Investigation Record: BENCH_03
+
+**1. Evidence Gathered**
+I queried the transaction history for `ACC_00002` and analyzed connected devices.
+> Transaction history for ACC_00002 (18 transactions):
+> Connected accounts for ACC_00002 (252 found):
+
+**2. Graph Pattern Analysis**
+I ran TigerGraph traversal patterns on `TXN_SI_000`.
+```
+No strong fraud patterns detected.
+Risk: 0.386 (baseline behavior appears normal)
+```
+
+**3. Policy Retrieval (GraphRAG)**
+Consulting the bank fraud policy:
+_Risk Thresholds: MEDIUM 0.31-0.5 (monitor), requires L1 Analyst review if escalated._
+
+**4. Next Best Action (NBA)**
+Based on the evidence and policy guidelines, the recommended action is:
+**Monitor account, request identity verification documents.**
+
+**5. SAR Determination**
+If confirmed fraud exceeds $5,000, a Suspicious Activity Report (SAR) will be generated and filed automatically.
+
+============================================================
+Case Status: PENDING ANALYST REVIEW

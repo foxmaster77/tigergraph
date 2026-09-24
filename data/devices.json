@@ -1,0 +1,1402 @@
+[
+  {
+    "device_id": "DEV_0000",
+    "device_type": "desktop",
+    "device_info": "MacOS 11",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0001",
+    "device_type": "tablet",
+    "device_info": "MacOS 10",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0002",
+    "device_type": "mobile",
+    "device_info": "MacOS 10",
+    "browser": "Safari",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0003",
+    "device_type": "tablet",
+    "device_info": "iOS 10",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0004",
+    "device_type": "desktop",
+    "device_info": "Android 12",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0005",
+    "device_type": "desktop",
+    "device_info": "iOS 13",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0006",
+    "device_type": "tablet",
+    "device_info": "Windows 12",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0007",
+    "device_type": "desktop",
+    "device_info": "MacOS 14",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0008",
+    "device_type": "desktop",
+    "device_info": "MacOS 14",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0009",
+    "device_type": "mobile",
+    "device_info": "Android 11",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0010",
+    "device_type": "tablet",
+    "device_info": "iOS 12",
+    "browser": "Safari",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0011",
+    "device_type": "tablet",
+    "device_info": "iOS 10",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0012",
+    "device_type": "desktop",
+    "device_info": "iOS 11",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0013",
+    "device_type": "mobile",
+    "device_info": "MacOS 10",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0014",
+    "device_type": "mobile",
+    "device_info": "MacOS 14",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0015",
+    "device_type": "mobile",
+    "device_info": "iOS 13",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0016",
+    "device_type": "tablet",
+    "device_info": "MacOS 14",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0017",
+    "device_type": "mobile",
+    "device_info": "MacOS 13",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0018",
+    "device_type": "mobile",
+    "device_info": "Windows 14",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0019",
+    "device_type": "mobile",
+    "device_info": "MacOS 10",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0020",
+    "device_type": "mobile",
+    "device_info": "iOS 13",
+    "browser": "Safari",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0021",
+    "device_type": "desktop",
+    "device_info": "Windows 11",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0022",
+    "device_type": "tablet",
+    "device_info": "iOS 14",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0023",
+    "device_type": "desktop",
+    "device_info": "Windows 12",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0024",
+    "device_type": "desktop",
+    "device_info": "Android 12",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0025",
+    "device_type": "mobile",
+    "device_info": "Android 11",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0026",
+    "device_type": "desktop",
+    "device_info": "Windows 13",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0027",
+    "device_type": "mobile",
+    "device_info": "MacOS 11",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0028",
+    "device_type": "desktop",
+    "device_info": "Android 14",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0029",
+    "device_type": "mobile",
+    "device_info": "MacOS 13",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0030",
+    "device_type": "tablet",
+    "device_info": "Android 12",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0031",
+    "device_type": "tablet",
+    "device_info": "Windows 13",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0032",
+    "device_type": "desktop",
+    "device_info": "Android 10",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0033",
+    "device_type": "desktop",
+    "device_info": "iOS 13",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0034",
+    "device_type": "mobile",
+    "device_info": "Android 11",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0035",
+    "device_type": "tablet",
+    "device_info": "Windows 14",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0036",
+    "device_type": "tablet",
+    "device_info": "Android 10",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0037",
+    "device_type": "tablet",
+    "device_info": "MacOS 13",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0038",
+    "device_type": "mobile",
+    "device_info": "Windows 11",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0039",
+    "device_type": "mobile",
+    "device_info": "Windows 12",
+    "browser": "Safari",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0040",
+    "device_type": "tablet",
+    "device_info": "Windows 10",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0041",
+    "device_type": "tablet",
+    "device_info": "iOS 10",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0042",
+    "device_type": "mobile",
+    "device_info": "Android 10",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0043",
+    "device_type": "tablet",
+    "device_info": "MacOS 11",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0044",
+    "device_type": "tablet",
+    "device_info": "Windows 13",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0045",
+    "device_type": "tablet",
+    "device_info": "Android 12",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0046",
+    "device_type": "desktop",
+    "device_info": "MacOS 10",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0047",
+    "device_type": "mobile",
+    "device_info": "Android 13",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0048",
+    "device_type": "desktop",
+    "device_info": "MacOS 14",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0049",
+    "device_type": "mobile",
+    "device_info": "Android 10",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0050",
+    "device_type": "tablet",
+    "device_info": "iOS 14",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0051",
+    "device_type": "desktop",
+    "device_info": "MacOS 10",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0052",
+    "device_type": "desktop",
+    "device_info": "Windows 14",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0053",
+    "device_type": "desktop",
+    "device_info": "Windows 10",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0054",
+    "device_type": "desktop",
+    "device_info": "iOS 14",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0055",
+    "device_type": "tablet",
+    "device_info": "iOS 10",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0056",
+    "device_type": "mobile",
+    "device_info": "iOS 13",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0057",
+    "device_type": "tablet",
+    "device_info": "Windows 12",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0058",
+    "device_type": "desktop",
+    "device_info": "iOS 12",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0059",
+    "device_type": "tablet",
+    "device_info": "MacOS 14",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0060",
+    "device_type": "tablet",
+    "device_info": "Windows 13",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0061",
+    "device_type": "tablet",
+    "device_info": "iOS 12",
+    "browser": "Safari",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0062",
+    "device_type": "tablet",
+    "device_info": "Android 14",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0063",
+    "device_type": "desktop",
+    "device_info": "MacOS 12",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0064",
+    "device_type": "desktop",
+    "device_info": "Windows 13",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0065",
+    "device_type": "tablet",
+    "device_info": "Android 13",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0066",
+    "device_type": "mobile",
+    "device_info": "MacOS 10",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0067",
+    "device_type": "mobile",
+    "device_info": "Windows 12",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0068",
+    "device_type": "desktop",
+    "device_info": "Windows 12",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0069",
+    "device_type": "tablet",
+    "device_info": "Windows 11",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0070",
+    "device_type": "mobile",
+    "device_info": "Android 13",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0071",
+    "device_type": "mobile",
+    "device_info": "MacOS 13",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0072",
+    "device_type": "mobile",
+    "device_info": "Windows 14",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0073",
+    "device_type": "tablet",
+    "device_info": "Windows 11",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0074",
+    "device_type": "desktop",
+    "device_info": "MacOS 12",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0075",
+    "device_type": "mobile",
+    "device_info": "MacOS 14",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0076",
+    "device_type": "tablet",
+    "device_info": "Windows 12",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0077",
+    "device_type": "mobile",
+    "device_info": "Android 10",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0078",
+    "device_type": "mobile",
+    "device_info": "Android 12",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0079",
+    "device_type": "desktop",
+    "device_info": "Windows 12",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0080",
+    "device_type": "desktop",
+    "device_info": "Android 14",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0081",
+    "device_type": "tablet",
+    "device_info": "MacOS 11",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0082",
+    "device_type": "tablet",
+    "device_info": "iOS 12",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0083",
+    "device_type": "tablet",
+    "device_info": "MacOS 11",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0084",
+    "device_type": "mobile",
+    "device_info": "Windows 10",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0085",
+    "device_type": "tablet",
+    "device_info": "Windows 12",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0086",
+    "device_type": "desktop",
+    "device_info": "iOS 10",
+    "browser": "Safari",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0087",
+    "device_type": "mobile",
+    "device_info": "MacOS 11",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0088",
+    "device_type": "tablet",
+    "device_info": "iOS 13",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0089",
+    "device_type": "desktop",
+    "device_info": "MacOS 12",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0090",
+    "device_type": "tablet",
+    "device_info": "Windows 11",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0091",
+    "device_type": "mobile",
+    "device_info": "MacOS 12",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0092",
+    "device_type": "desktop",
+    "device_info": "iOS 14",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0093",
+    "device_type": "desktop",
+    "device_info": "MacOS 10",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0094",
+    "device_type": "desktop",
+    "device_info": "Android 10",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0095",
+    "device_type": "mobile",
+    "device_info": "MacOS 14",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0096",
+    "device_type": "mobile",
+    "device_info": "iOS 11",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0097",
+    "device_type": "tablet",
+    "device_info": "MacOS 10",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0098",
+    "device_type": "mobile",
+    "device_info": "iOS 13",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0099",
+    "device_type": "desktop",
+    "device_info": "MacOS 14",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0100",
+    "device_type": "mobile",
+    "device_info": "MacOS 12",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0101",
+    "device_type": "mobile",
+    "device_info": "Windows 10",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0102",
+    "device_type": "mobile",
+    "device_info": "Android 13",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0103",
+    "device_type": "mobile",
+    "device_info": "MacOS 14",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0104",
+    "device_type": "tablet",
+    "device_info": "Windows 12",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0105",
+    "device_type": "tablet",
+    "device_info": "Android 13",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0106",
+    "device_type": "tablet",
+    "device_info": "MacOS 14",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0107",
+    "device_type": "mobile",
+    "device_info": "Windows 12",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0108",
+    "device_type": "mobile",
+    "device_info": "iOS 14",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0109",
+    "device_type": "tablet",
+    "device_info": "Windows 14",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0110",
+    "device_type": "tablet",
+    "device_info": "Android 12",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0111",
+    "device_type": "desktop",
+    "device_info": "iOS 13",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0112",
+    "device_type": "tablet",
+    "device_info": "Android 12",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0113",
+    "device_type": "desktop",
+    "device_info": "MacOS 11",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0114",
+    "device_type": "tablet",
+    "device_info": "MacOS 13",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0115",
+    "device_type": "tablet",
+    "device_info": "Android 11",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0116",
+    "device_type": "mobile",
+    "device_info": "iOS 13",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0117",
+    "device_type": "tablet",
+    "device_info": "Windows 14",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0118",
+    "device_type": "mobile",
+    "device_info": "Windows 12",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0119",
+    "device_type": "tablet",
+    "device_info": "iOS 10",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0120",
+    "device_type": "desktop",
+    "device_info": "Android 14",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0121",
+    "device_type": "tablet",
+    "device_info": "Android 13",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0122",
+    "device_type": "tablet",
+    "device_info": "MacOS 11",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0123",
+    "device_type": "desktop",
+    "device_info": "Android 12",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0124",
+    "device_type": "mobile",
+    "device_info": "MacOS 11",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0125",
+    "device_type": "tablet",
+    "device_info": "Windows 11",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0126",
+    "device_type": "desktop",
+    "device_info": "Windows 11",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0127",
+    "device_type": "tablet",
+    "device_info": "Android 14",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0128",
+    "device_type": "tablet",
+    "device_info": "Android 14",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0129",
+    "device_type": "mobile",
+    "device_info": "MacOS 11",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0130",
+    "device_type": "tablet",
+    "device_info": "Android 11",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0131",
+    "device_type": "tablet",
+    "device_info": "iOS 10",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0132",
+    "device_type": "tablet",
+    "device_info": "iOS 10",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0133",
+    "device_type": "desktop",
+    "device_info": "iOS 13",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0134",
+    "device_type": "desktop",
+    "device_info": "Android 10",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0135",
+    "device_type": "mobile",
+    "device_info": "Windows 13",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0136",
+    "device_type": "tablet",
+    "device_info": "iOS 13",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0137",
+    "device_type": "mobile",
+    "device_info": "MacOS 10",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0138",
+    "device_type": "desktop",
+    "device_info": "Android 14",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0139",
+    "device_type": "tablet",
+    "device_info": "iOS 14",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0140",
+    "device_type": "mobile",
+    "device_info": "Windows 11",
+    "browser": "Chrome",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0141",
+    "device_type": "mobile",
+    "device_info": "MacOS 14",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0142",
+    "device_type": "mobile",
+    "device_info": "Windows 10",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0143",
+    "device_type": "tablet",
+    "device_info": "Android 12",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0144",
+    "device_type": "tablet",
+    "device_info": "MacOS 13",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0145",
+    "device_type": "mobile",
+    "device_info": "Windows 11",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0146",
+    "device_type": "mobile",
+    "device_info": "Android 11",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0147",
+    "device_type": "desktop",
+    "device_info": "iOS 10",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0148",
+    "device_type": "desktop",
+    "device_info": "MacOS 13",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0149",
+    "device_type": "mobile",
+    "device_info": "Android 14",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0150",
+    "device_type": "tablet",
+    "device_info": "Android 13",
+    "browser": "Safari",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0151",
+    "device_type": "tablet",
+    "device_info": "Android 10",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0152",
+    "device_type": "mobile",
+    "device_info": "iOS 14",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0153",
+    "device_type": "tablet",
+    "device_info": "iOS 13",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0154",
+    "device_type": "mobile",
+    "device_info": "iOS 10",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0155",
+    "device_type": "mobile",
+    "device_info": "MacOS 14",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0156",
+    "device_type": "tablet",
+    "device_info": "MacOS 12",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0157",
+    "device_type": "desktop",
+    "device_info": "Windows 13",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0158",
+    "device_type": "tablet",
+    "device_info": "Android 12",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0159",
+    "device_type": "mobile",
+    "device_info": "MacOS 10",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0160",
+    "device_type": "desktop",
+    "device_info": "MacOS 14",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0161",
+    "device_type": "desktop",
+    "device_info": "MacOS 13",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0162",
+    "device_type": "tablet",
+    "device_info": "MacOS 12",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0163",
+    "device_type": "tablet",
+    "device_info": "Windows 13",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0164",
+    "device_type": "tablet",
+    "device_info": "iOS 12",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0165",
+    "device_type": "mobile",
+    "device_info": "Windows 13",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0166",
+    "device_type": "desktop",
+    "device_info": "iOS 12",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0167",
+    "device_type": "desktop",
+    "device_info": "Android 11",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0168",
+    "device_type": "tablet",
+    "device_info": "Android 10",
+    "browser": "Firefox",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0169",
+    "device_type": "desktop",
+    "device_info": "Windows 13",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0170",
+    "device_type": "desktop",
+    "device_info": "Windows 10",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0171",
+    "device_type": "desktop",
+    "device_info": "Android 11",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0172",
+    "device_type": "tablet",
+    "device_info": "Android 12",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0173",
+    "device_type": "mobile",
+    "device_info": "Windows 14",
+    "browser": "Edge",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0174",
+    "device_type": "mobile",
+    "device_info": "Android 10",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0175",
+    "device_type": "mobile",
+    "device_info": "Android 10",
+    "browser": "Safari",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0176",
+    "device_type": "tablet",
+    "device_info": "iOS 13",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0177",
+    "device_type": "mobile",
+    "device_info": "iOS 10",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0178",
+    "device_type": "tablet",
+    "device_info": "MacOS 11",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0179",
+    "device_type": "tablet",
+    "device_info": "MacOS 12",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0180",
+    "device_type": "tablet",
+    "device_info": "iOS 13",
+    "browser": "Chrome",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0181",
+    "device_type": "tablet",
+    "device_info": "MacOS 11",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0182",
+    "device_type": "desktop",
+    "device_info": "MacOS 13",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0183",
+    "device_type": "tablet",
+    "device_info": "iOS 13",
+    "browser": "Edge",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0184",
+    "device_type": "desktop",
+    "device_info": "iOS 10",
+    "browser": "Safari",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0185",
+    "device_type": "mobile",
+    "device_info": "Windows 11",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0186",
+    "device_type": "tablet",
+    "device_info": "MacOS 10",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0187",
+    "device_type": "mobile",
+    "device_info": "Windows 13",
+    "browser": "Chrome",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0188",
+    "device_type": "tablet",
+    "device_info": "MacOS 10",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0189",
+    "device_type": "mobile",
+    "device_info": "Windows 13",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0190",
+    "device_type": "desktop",
+    "device_info": "Windows 13",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0191",
+    "device_type": "desktop",
+    "device_info": "Android 12",
+    "browser": "Edge",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0192",
+    "device_type": "desktop",
+    "device_info": "MacOS 12",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0193",
+    "device_type": "tablet",
+    "device_info": "MacOS 12",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0194",
+    "device_type": "mobile",
+    "device_info": "MacOS 13",
+    "browser": "Firefox",
+    "os": "Android"
+  },
+  {
+    "device_id": "DEV_0195",
+    "device_type": "tablet",
+    "device_info": "MacOS 13",
+    "browser": "Firefox",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0196",
+    "device_type": "desktop",
+    "device_info": "Windows 14",
+    "browser": "Edge",
+    "os": "Mac OS X"
+  },
+  {
+    "device_id": "DEV_0197",
+    "device_type": "desktop",
+    "device_info": "Android 10",
+    "browser": "Chrome",
+    "os": "Windows NT 10.0"
+  },
+  {
+    "device_id": "DEV_0198",
+    "device_type": "desktop",
+    "device_info": "Windows 14",
+    "browser": "Safari",
+    "os": "iPhone OS"
+  },
+  {
+    "device_id": "DEV_0199",
+    "device_type": "tablet",
+    "device_info": "Android 11",
+    "browser": "Firefox",
+    "os": "Mac OS X"
+  }
+]

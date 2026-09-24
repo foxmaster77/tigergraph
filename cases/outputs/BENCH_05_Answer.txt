@@ -1,0 +1,73 @@
+FRAUD INVESTIGATION RECORD: BENCH_05
+Account: ACC_00020
+Transaction: TXN_MC_000
+Trigger: Case 5: Potential merchant collusion detected on account ACC_00020. Transaction TXN_MC_000 flagged with risk score 0.88.
+============================================================
+
+### Investigation Record: BENCH_05
+
+**1. Evidence Gathered**
+I queried the transaction history for `ACC_00020` and analyzed connected devices.
+> Transaction history for ACC_00020 (9 transactions):
+> Connected accounts for ACC_00020 (183 found):
+
+**2. Graph Pattern Analysis**
+I ran TigerGraph traversal patterns on `TXN_MC_000`.
+```
+Fraud patterns detected for ACC_00020 / TXN_MC_000:
+
+🔴 [PT002] Account Takeover (confidence: 82%)
+   → Risk spike to 0.82, avg history 0.38, amount $2834.14
+
+🔴 [PT004] Money Mule Network (confidence: 57%)
+   → High risk score. Run get_connected_accounts to confirm network.
+
+🔴 [PT005] Merchant Collusion (confidence: 78%)
+   → Low dist1 (5.0), high amount $2834.14
+```
+
+**3. Policy Retrieval (GraphRAG)**
+Consulting the bank fraud policy:
+_PATTERN 4: MONEY MULE NETWORK
+-------------------------------
+Definition: A fraudster uses a network of mule accounts to layer and
+transfer illicitly obtained funds.
+
+---
+
+Risk Level: CRITICAL
+Required Actions: Map the full network via graph traversal, freeze all
+  identified mule accounts, file SAR, escalate to Fraud Analyst L2.
+
+---
+
+PATTERN 5: MERCHANT COLLUSION FRAUD
+--------------------------------------
+Definition: A merchant collaborates with a fraudster to process fictitious
+transactions or inflate transaction amounts.
+
+---
+
+Tier 1 (Automated - No Approval Needed):
+- Query transaction history (last 90 days)
+- Retrieve device fingerprint data
+- Run graph traversal for connected accounts
+- Compare against known fraud patterns
+- Access prior closed cases via case memory
+
+---
+
+PATTERN 2: ACCOUNT TAKEOVER (ATO)
+-----------------------------------
+Definition: A fraudster gains unauthorized access to a legitimate account
+and uses it to conduct fraudulent transactions._
+
+**4. Next Best Action (NBA)**
+Based on the evidence and policy guidelines, the recommended action is:
+**Escalate to L2 Analyst, freeze all connected mule accounts, and prepare SAR.**
+
+**5. SAR Determination**
+If confirmed fraud exceeds $5,000, a Suspicious Activity Report (SAR) will be generated and filed automatically.
+
+============================================================
+Case Status: PENDING ANALYST REVIEW
