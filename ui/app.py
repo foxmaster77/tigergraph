@@ -44,85 +44,114 @@ st.set_page_config(page_title="TigerGraph Fraud Agent", layout="wide", page_icon
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syncopate:wght@400;700&display=swap');
 
-/* Dynamic Cyberpunk Scanline Background */
+/* Deep Space Grid Animated Background */
 html, body, [class*="css"] {
-    font-family: 'Share Tech Mono', monospace !important;
-    background-color: #0B0B12 !important;
+    font-family: 'Space Mono', monospace !important;
+    background-color: #05050f !important;
     background-image: 
-        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-    background-size: 100% 2px, 3px 100%;
+        radial-gradient(circle at 15% 50%, rgba(76, 29, 149, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(20, 184, 166, 0.15), transparent 25%),
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+    color: #e2e8f0;
 }
 
-/* Neon Headers */
+/* Syncopate Headers with Dual-Tone Glitch */
 h1, h2, h3 {
-    font-family: 'Orbitron', sans-serif !important;
-    color: #0ff !important;
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+    font-family: 'Syncopate', sans-serif !important;
+    color: #f8fafc !important;
+    text-shadow: 2px 2px 0px #e11d48, -2px -2px 0px #0284c7;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 700 !important;
 }
 
-/* Cyber Sidebar */
+/* Frost-Glass Sidebar */
 section[data-testid="stSidebar"] {
-    background-color: rgba(10, 0, 30, 0.95) !important;
-    border-right: 2px solid #ff00ff;
-    box-shadow: 2px 0 15px rgba(255, 0, 255, 0.5);
+    background: rgba(10, 5, 20, 0.7) !important;
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border-right: 1px solid rgba(168, 85, 247, 0.3);
+    box-shadow: 4px 0 20px rgba(0,0,0,0.5);
 }
 
-/* Interactive Neon Buttons */
-div.stButton > button {
-    background: transparent !important;
-    border: 2px solid #0ff !important;
-    color: #0ff !important;
-    font-family: 'Orbitron', sans-serif !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
-    transition: all 0.2s ease;
-    border-radius: 0px !important;
-}
-
-div.stButton > button:hover {
-    background: #0ff !important;
-    color: #000 !important;
-    box-shadow: inset 0 0 20px #0ff, 0 0 30px #0ff;
-}
-
-/* Retro Glassmorphism Case Cards */
-.case-card, div[data-testid="stMarkdownContainer"] > div {
-    background-color: rgba(20, 0, 40, 0.6) !important;
-    border: 1px solid rgba(255, 0, 255, 0.3) !important;
-    border-left: 4px solid #ff00ff !important;
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
-    padding: 15px;
-    border-radius: 4px;
-    backdrop-filter: blur(5px);
-}
-
-/* Text glow */
-p {
-    color: #E2E8F0;
-    font-size: 1.05rem;
-}
-
-/* Hacky overrides for streamlit tab text */
+/* Floating Action Tabs */
 button[data-baseweb="tab"] {
     background: transparent !important;
-    color: #ff00ff !important;
-    font-family: 'Orbitron', sans-serif !important;
+    color: #94a3b8 !important;
+    font-family: 'Syncopate', sans-serif !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.3s;
 }
 button[data-baseweb="tab"] p {
-    color: #ff00ff !important;
+    color: inherit !important;
+    font-size: 0.95rem;
+}
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #06b6d4 !important;
+    border-bottom: 2px solid #06b6d4 !important;
+    text-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0B0B12; }
-::-webkit-scrollbar-thumb { background: #ff00ff; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #0ff; }
+/* HUD Element Style for Cards */
+.case-card, div[data-testid="stMarkdownContainer"] > div[style*="border-radius: 5px"] {
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%) !important;
+    border: 1px solid rgba(168, 85, 247, 0.3) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px !important;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-left: none !important;
+}
+
+.case-card::before, div[data-testid="stMarkdownContainer"] > div[style*="border-radius: 5px"]::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    background: #06b6d4;
+    box-shadow: 0 0 15px #06b6d4;
+}
+
+/* Dynamic Hologram Buttons */
+div.stButton > button {
+    background: linear-gradient(90deg, rgba(168,85,247,0.15) 0%, rgba(6,182,212,0.15) 100%) !important;
+    border: 1px solid #06b6d4 !important;
+    color: #f8fafc !important;
+    border-radius: 6px !important;
+    font-family: 'Syncopate', sans-serif !important;
+    letter-spacing: 1px;
+    padding: 8px 20px !important;
+    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    text-transform: uppercase;
+}
+div.stButton > button:hover {
+    background: linear-gradient(90deg, rgba(168,85,247,0.7) 0%, rgba(6,182,212,0.7) 100%) !important;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(6, 182, 212, 0.5);
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+/* Alerts */
+.stAlert {
+    background: rgba(168, 85, 247, 0.1) !important;
+    border: 1px solid #a855f7 !important;
+    color: #f8fafc !important;
+    border-radius: 8px !important;
+}
+
+/* Scrollbar HUD Style */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #05050f; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#06b6d4, #a855f7); border-radius: 4px; }
 </style>
 """, unsafe_allow_html=True)
 
